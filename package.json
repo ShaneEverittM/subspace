@@ -3,20 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
+    "basis": "file:../../rust/basis",
     "cross-env": "^7.0.3",
     "electron-is-dev": "^1.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.1"
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "concurrently -k \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electronmon .\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dist:win": "npm run build && electron-builder -w -c.extraMetadata.main=build/electron.js",
     "dist:mac": "npm run build && electron-builder -m -c.extraMetadata.main=build/electron.js",
@@ -25,8 +21,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -52,8 +47,8 @@
   "homepage": "./",
   "main": "./public/electron.js",
   "build": {
-    "appId": "com.electron.my_app",
-    "productName": "My App",
+    "appId": "com.electron.subspace",
+    "productName": "Subspace",
     "files": [
       "build/**/*",
       "node_modules/**/*"
@@ -72,7 +67,7 @@
     },
     "linux": {
       "target": "deb",
-      "category": "Development"
+      "category": "Tools"
     }
   }
 }
