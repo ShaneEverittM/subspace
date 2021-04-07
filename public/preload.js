@@ -1,5 +1,3 @@
-const {contextBridge} = require('electron')
-
-console.log("Running preload script")
-
-contextBridge.exposeInMainWorld('electron', {basis: require('basis')})
+require('electron')
+    .contextBridge
+    .exposeInMainWorld('electron', {basis: require('basis')})
