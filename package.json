@@ -2,6 +2,7 @@
   "name": "subspace",
   "version": "0.1.0",
   "private": true,
+  "author": "Shane Murphy <shaneeverittmurphy@gmail.com>",
   "dependencies": {
     "basis": "file:../../rust/basis",
     "cross-env": "^7.0.3",
